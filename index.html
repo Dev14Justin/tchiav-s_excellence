@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Tchiav’s Excellence</title>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header / Navbar -->
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a href="#" class="text-2xl font-bold text-gray-800">
+            Tchiav<span class="text-emerald-500">'</span>s <span class="text-emerald-500">Excellence</span>
+          </a>
+          <nav class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#hero"
+              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
+              >Accueil</a
+            >
+            <a
+              href="#about"
+              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
+              >À Propos</a
+            >
+            <a
+              href="#services"
+              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
+              >Nos Services</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
+              >Témoignages</a
+            >
+            <a
+              href="#contact"
+              class="bg-red-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-700 cta-button"
+              >Réserver sa place</a
+            >
+          </nav>
+          <button id="mobile-menu-button" class="md:hidden text-gray-800">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-4 6h4"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white">
+        <a
+          href="#hero"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
+          >Accueil</a
+        >
+        <a
+          href="#about"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
+          >À Propos</a
+        >
+        <a
+          href="#services"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
+          >Nos Services</a
+        >
+        <a
+          href="#testimonials"
+          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
+          >Témoignages</a
+        >
+        <a
+          href="#contact"
+          class="block py-3 px-6 text-sm bg-red-600 text-white text-center font-semibold"
+          >Réserver sa place</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Section Hero -->
+      <section id="hero" class="pt-24 md:pt-32 pb-16 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+              <h1
+                class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4"
+              >
+                Transformez votre
+                <span class="text-emerald-500">soutenance</span> en un véritable
+                succès.
+              </h1>
+              <p class="text-lg text-gray-600 mb-8">
+                Avec Impact'Oral, ne vous contentez pas de présenter. Impactez,
+                convainquez et brillez devant votre jury.
+              </p>
+              <a
+                href="#services"
+                class="bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition duration-300 inline-block shadow-lg"
+                >Découvrir nos programmes</a
+              >
+            </div>
+            <div class="md:w-1/2">
+              <!-- Remplacer par une image pertinente -->
+              <img
+                src="https://placehold.co/600x400/10b981/ffffff?text=Impact'Oral"
+                alt="Étudiante confiante lors de sa présentation"
+                class="rounded-xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section À Propos -->
+      <section id="about" class="py-20 bg-gray-50 fade-in-section">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+              <!-- Remplacer par l'image de la coach -->
+              <img
+                src="./src/img/claudine_sacthivi.jpg"
+                alt="Coach académique de Tchiav's Excellence"
+                class="rounded-xl shadow-2xl w-full"
+              />
+            </div>
+            <div class="md:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Votre voix. Votre pouvoir. Votre réussite.
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Chez Tchiav's Excellence, nous croyons que chaque étudiant
+                possède une voix unique et puissante. Notre mission, à travers
+                le programme
+                <span class="font-semibold text-emerald-500">Impact'Oral</span>,
+                est de vous donner les outils, la confiance et la technique pour
+                que cette voix résonne avec clarté et conviction.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Fondé par une coach académique, comédienne et formatrice
+                passionnée, nous avons déjà accompagné de nombreux étudiants
+                vers l'excellence, avec des résultats concrets. Aujourd'hui,
+                nous vous ouvrons les portes d'un accompagnement unique pour
+                faire de votre soutenance un moment inoubliable.
+              </p>
+              <blockquote
+                class="border-l-4 border-emerald-500 pl-4 italic text-gray-700"
+              >
+                "Quand tu crois en ta voix, le monde t’écoute."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Services -->
+      <section id="services" class="py-20 bg-white fade-in-section">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-900">
+              Un Accompagnement Complet
+            </h2>
+            <p class="text-lg text-gray-600 mt-2">
+              Tout ce dont vous avez besoin pour exceller.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-emerald-100 text-emerald-600 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Optimisation du Mémoire</h3>
+              <p class="text-gray-600">
+                Nous analysons et améliorons la structure, la clarté et l'impact
+                de votre rapport écrit pour qu'il soit le parfait support de
+                votre oral.
+              </p>
+            </div>
+            <!-- Service Card 2 -->
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-emerald-100 text-emerald-600 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Coaching en Art Oratoire</h3>
+              <p class="text-gray-600">
+                Maîtrisez votre voix, votre gestuelle et votre posture. Apprenez
+                les techniques des grands orateurs pour captiver votre
+                auditoire.
+              </p>
+            </div>
+            <!-- Service Card 3 -->
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="bg-emerald-100 text-emerald-600 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Simulations de Soutenance</h3>
+              <p class="text-gray-600">
+                Entraînez-vous en conditions réelles face à nos coachs. Recevez
+                des feedbacks constructifs pour être parfaitement préparé le
+                jour J.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Témoignages -->
+      <section id="testimonials" class="py-20 bg-gray-50 fade-in-section">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-gray-900">
+              Ils nous ont fait confiance
+            </h2>
+            <p class="text-lg text-gray-600 mt-2">
+              Leurs succès sont notre plus grande fierté.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Témoignage 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <p class="text-gray-600 italic mb-4">
+                "L'accompagnement d'Impact'Oral a été un tournant. J'étais
+                paralysé par le stress, mais j'ai appris à canaliser cette
+                énergie pour livrer une présentation puissante. Mon jury a été
+                bluffé. J'ai eu 18/20 !"
+              </p>
+              <div class="flex items-center">
+                <img
+                  class="w-12 h-12 rounded-full mr-4"
+                  src="https://placehold.co/100x100/e2e8f0/334155?text=A"
+                  alt="Avatar client"
+                />
+                <div>
+                  <p class="font-bold text-gray-800">
+                    Ama, Étudiante en Master Marketing
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Témoignage 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <p class="text-gray-600 italic mb-4">
+                "Au-delà de la soutenance, ce coaching m'a servi pour mes
+                entretiens d'embauche. J'ai gagné une confiance en moi
+                incroyable. C'est un investissement pour la vie."
+              </p>
+              <div class="flex items-center">
+                <img
+                  class="w-12 h-12 rounded-full mr-4"
+                  src="https://placehold.co/100x100/e2e8f0/334155?text=K"
+                  alt="Avatar client"
+                />
+                <div>
+                  <p class="font-bold text-gray-800">
+                    Koffi, Ingénieur Informatique Diplômé
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section CTA -->
+      <section
+        id="contact"
+        class="py-20 bg-emerald-600 text-white fade-in-section"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl font-extrabold mb-4">
+            Prêt(e) à faire de votre soutenance un triomphe ?
+          </h2>
+          <p class="text-lg text-emerald-100 mb-8 max-w-3xl mx-auto">
+            N'attendez plus. Les places sont limitées pour garantir un
+            accompagnement de qualité. Réservez votre séance de découverte dès
+            maintenant.
+          </p>
+          <a
+            href="https://wa.me/22899767185?text=Bonjour%2C%20je%20suis%20intéressé(e)%20par%20le%20programme%20Impact'Oral."
+            target="_blank"
+            class="bg-red-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-red-700 cta-button inline-flex items-center shadow-2xl"
+          >
+            <svg
+              class="w-6 h-6 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.222 10.333a.75.75 0 01-.222.53l-2.667 2.667a.75.75 0 11-1.06-1.06L8.47 10.333 6.273 8.136a.75.75 0 111.06-1.06l2.667 2.667a.75.75 0 01.222.594zM14 10.5a.5.5 0 000-1h-4a.5.5 0 000 1h4z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-7a7 7 0 100 14 7 7 0 000-14z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span>Contacter sur WhatsApp</span>
+          </a>
+          <p class="mt-4 text-emerald-200">Contact direct : +228 99 76 71 85</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p class="font-bold text-lg mb-2">Impact'Oral by Tchiav’s Excellence</p>
+        <p class="text-gray-400">
+          &copy; 2025 Tchiav’s Excellence. Tous droits réservés.
+        </p>
+        <!-- Ajouter les liens vers les réseaux sociaux ici -->
+      </div>
+    </footer>
+
+    <!-- Scroll-to-top button -->
+    <button
+      id="to-top-button"
+      class="hidden fixed bottom-5 right-5 bg-emerald-500 text-white p-3 rounded-full shadow-lg hover:bg-emerald-600 transition-all duration-300"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
