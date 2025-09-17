@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations by Tchiav’s Excellence</title>
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.5);
+        }
+        .success-card {
+            transition: all 0.3s ease;
+        }
+        .success-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15);
+        }
+        /* Style for the score */
+        .score-circle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(#10B981 var(--value), #e2e8f0 var(--value));
+        }
+        .score-circle::before {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        .score-text {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    
+    <header id="header-placeholder"></header>
+
+    <main id="main-content" class="pt-24">
+
+        <!-- Section 1: Hero -->
+        <section class="py-16 text-center bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Leurs Succès, Notre Fierté
+                </h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                    Découvrez comment nous avons transformé l'épreuve de la soutenance en une opportunité de briller pour des dizaines d'étudiants. Les résultats parlent d'eux-mêmes.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-3xl font-bold text-emerald-500">17/20</p>
+                        <p class="text-sm text-gray-500">Note Moyenne Obtenue</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-3xl font-bold text-emerald-500">+20</p>
+                        <p class="text-sm text-gray-500">Étudiants Accompagnés</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <p class="text-3xl font-bold text-emerald-500">98%</p>
+                        <p class="text-sm text-gray-500">Taux de Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Success Stories Soutenances -->
+        <section class="py-20 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-gray-900">Galerie des Performances</h2>
+                    <p class="text-lg text-gray-600 mt-2">Chaque étudiant est une histoire de réussite unique.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Success Story 1 -->
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col items-center text-center success-card">
+                        <div class="score-circle" style="--value: 90%;">
+                            <span class="score-text text-emerald-600">18<span class="text-sm">/20</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6">Kossi A.</h3>
+                        <p class="text-gray-500 mb-4">Master en Droit des Affaires</p>
+                        <blockquote class="italic text-gray-700">
+                            "J'ai non seulement maîtrisé mon sujet, mais aussi ma peur de parler en public. L'impact sur mon jury a été immédiat."
+                        </blockquote>
+                    </div>
+                    <!-- Success Story 2 -->
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col items-center text-center success-card">
+                        <div class="score-circle" style="--value: 85%;">
+                             <span class="score-text text-emerald-600">17<span class="text-sm">/20</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6">Fatima B.</h3>
+                        <p class="text-gray-500 mb-4">Licence en Communication</p>
+                        <blockquote class="italic text-gray-700">
+                            "La simulation de soutenance a été un déclic. Le jour J, j'avais l'impression de l'avoir déjà vécu. Zéro stress, 100% confiance."
+                        </blockquote>
+                    </div>
+                    <!-- Success Story 3 -->
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col items-center text-center success-card">
+                         <div class="score-circle" style="--value: 95%;">
+                             <span class="score-text text-emerald-600">19<span class="text-sm">/20</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6">David C.</h3>
+                        <p class="text-gray-500 mb-4">Master en Ingénierie Logicielle</p>
+                        <blockquote class="italic text-gray-700">
+                            "L'aide sur la structuration de mon mémoire a tout changé. Mon discours était clair, logique et a impressionné les examinateurs."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Nos Formations Complémentaires -->
+        <section class="py-20 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-gray-900">Plus qu'une Soutenance, une Compétence de Vie</h2>
+                    <p class="text-lg text-gray-600 mt-2">Nous vous formons pour réussir au-delà de l'université.</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
+                    <!-- Formation Art Oratoire -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col">
+                        <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.257 0 7.168 2.912 7.168 7.168 0 3.14-2.333 5.482-5.168 5.482H10v-5.482h.571z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Formation en Art Oratoire</h3>
+                        <p class="text-gray-600 flex-grow">Maîtrisez l'art de la persuasion. Cette formation intensive vous apprend à structurer vos idées, à captiver votre audience et à communiquer avec charisme, que ce soit pour une présentation, un pitch ou un débat.</p>
+                    </div>
+                     <!-- Formation Soft Skills -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Développement des Soft Skills</h3>
+                        <p class="text-gray-600 flex-grow">Leadership, intelligence émotionnelle, gestion du temps, pensée critique... Développez les compétences humaines essentielles qui feront la différence dans votre carrière professionnelle et votre vie personnelle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Call to Action -->
+        <section class="py-20 bg-emerald-600 text-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold mb-4">Prêt(e) à devenir notre prochaine Success Story ?</h2>
+                <p class="text-lg text-emerald-100 mb-8 max-w-3xl mx-auto">Votre parcours vers l'excellence commence ici. Ne laissez pas le stress ou le doute vous freiner. Ensemble, faisons de votre soutenance un moment mémorable.</p>
+                <a href="/src/pages/reservation.html" class="bg-red-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-red-700 transition duration-300 inline-flex items-center shadow-2xl">
+                   <span>Réserver mon accompagnement</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"> </footer>
+
+    <!-- Scroll-to-top button -->
+    <button
+      id="to-top-button"
+      class="hidden fixed bottom-5 right-5 bg-emerald-500 text-white p-3 rounded-full shadow-lg hover:bg-emerald-600 transition-all duration-300"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>

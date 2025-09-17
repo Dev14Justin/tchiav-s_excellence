@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,95 +8,104 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Tchiav’s Excellence</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .nav-link-active {
+            color: #10B981; /* emerald-500 */
+            font-weight: 600;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(220, 38, 38, 0.5);
+        }
+
+        /* Testimonial Carousel Styles */
+        #testimonial-carousel .testimonial-card {
+            position: absolute;
+            width: 100%;
+            max-width: 600px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        #testimonial-carousel .testimonial-card.active {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            filter: blur(0);
+            z-index: 20;
+            background-color: #10B981; /* emerald-500 */
+            color: white;
+        }
+        .testimonial-card.active .text-gray-600 {
+             color: #d1fae5; /* emerald-100 */
+        }
+         .testimonial-card.active .text-gray-800 {
+             color: white;
+         }
+         .testimonial-card.active .text-gray-500 {
+             color: #a7f3d0; /* emerald-200 */
+         }
+
+        #testimonial-carousel .testimonial-card.prev {
+            transform: translateX(-50%) scale(0.8);
+            opacity: 0.4;
+            filter: blur(2px);
+            z-index: 10;
+        }
+
+        #testimonial-carousel .testimonial-card.next {
+            transform: translateX(50%) scale(0.8);
+            opacity: 0.4;
+            filter: blur(2px);
+            z-index: 10;
+        }
+
+        #testimonial-carousel .testimonial-card.hidden-prev,
+        #testimonial-carousel .testimonial-card.hidden-next {
+            transform: scale(0.5);
+            opacity: 0;
+            filter: blur(4px);
+            z-index: 0;
+        }
+
+        #testimonial-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d1d5db; /* gray-300 */
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        #testimonial-dots .dot.active {
+            background-color: #10B981; /* emerald-500 */
+        }
+    </style>
   </head>
 
   <body class="bg-gray-50 text-gray-800">
-    <!-- Header / Navbar -->
-    <header
-      id="header"
-      class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300"
-    >
-      <div class="container mx-auto px-6 py-3">
-        <div class="flex justify-between items-center">
-          <a href="#" class="text-2xl font-bold text-gray-800">
-            Tchiav<span class="text-emerald-500">'</span>s <span class="text-emerald-500">Excellence</span>
-          </a>
-          <nav class="hidden md:flex space-x-8 items-center">
-            <a
-              href="#hero"
-              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
-              >Accueil</a
-            >
-            <a
-              href="#about"
-              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
-              >À Propos</a
-            >
-            <a
-              href="#services"
-              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
-              >Nos Services</a
-            >
-            <a
-              href="#testimonials"
-              class="text-gray-600 hover:text-emerald-500 transition duration-300 nav-link"
-              >Témoignages</a
-            >
-            <a
-              href="#contact"
-              class="bg-red-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-700 cta-button"
-              >Réserver sa place</a
-            >
-          </nav>
-          <button id="mobile-menu-button" class="md:hidden text-gray-800">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-4 6h4"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-white">
-        <a
-          href="#hero"
-          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
-          >Accueil</a
-        >
-        <a
-          href="#about"
-          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
-          >À Propos</a
-        >
-        <a
-          href="#services"
-          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
-          >Nos Services</a
-        >
-        <a
-          href="#testimonials"
-          class="block py-3 px-6 text-sm text-gray-700 hover:bg-emerald-50"
-          >Témoignages</a
-        >
-        <a
-          href="#contact"
-          class="block py-3 px-6 text-sm bg-red-600 text-white text-center font-semibold"
-          >Réserver sa place</a
-        >
-      </div>
-    </header>
+    <header id="header-placeholder"></header>
 
-    <main>
+    <main id="main-content">
       <!-- Section Hero -->
       <section id="hero" class="pt-24 md:pt-32 pb-16 bg-white">
         <div class="container mx-auto px-6">
@@ -138,7 +147,7 @@
             <div class="md:w-1/2">
               <!-- Remplacer par l'image de la coach -->
               <img
-                src="./src/img/claudine_sacthivi.jpg"
+                src="/src/img/claudine_sacthivi.jpg"
                 alt="Coach académique de Tchiav's Excellence"
                 class="rounded-xl shadow-2xl w-full"
               />
@@ -282,7 +291,7 @@
       </section>
 
       <!-- Section Témoignages -->
-      <section id="testimonials" class="py-20 bg-gray-50 fade-in-section">
+      <section id="testimonials" class="py-16 bg-gray-50 fade-in-section overflow-hidden">
         <div class="container mx-auto px-6">
           <div class="text-center mb-12">
             <h2 class="text-4xl font-extrabold text-gray-900">
@@ -292,49 +301,39 @@
               Leurs succès sont notre plus grande fierté.
             </p>
           </div>
-          <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Témoignage 1 -->
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <p class="text-gray-600 italic mb-4">
-                "L'accompagnement d'Impact'Oral a été un tournant. J'étais
-                paralysé par le stress, mais j'ai appris à canaliser cette
-                énergie pour livrer une présentation puissante. Mon jury a été
-                bluffé. J'ai eu 18/20 !"
-              </p>
-              <div class="flex items-center">
-                <img
-                  class="w-12 h-12 rounded-full mr-4"
-                  src="https://placehold.co/100x100/e2e8f0/334155?text=A"
-                  alt="Avatar client"
-                />
-                <div>
-                  <p class="font-bold text-gray-800">
-                    Ama, Étudiante en Master Marketing
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Témoignage 2 -->
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <p class="text-gray-600 italic mb-4">
-                "Au-delà de la soutenance, ce coaching m'a servi pour mes
-                entretiens d'embauche. J'ai gagné une confiance en moi
-                incroyable. C'est un investissement pour la vie."
-              </p>
-              <div class="flex items-center">
-                <img
-                  class="w-12 h-12 rounded-full mr-4"
-                  src="https://placehold.co/100x100/e2e8f0/334155?text=K"
-                  alt="Avatar client"
-                />
-                <div>
-                  <p class="font-bold text-gray-800">
-                    Koffi, Ingénieur Informatique Diplômé
-                  </p>
-                </div>
-              </div>
-            </div>
+
+          <div id="testimonial-carousel" class="relative flex items-center justify-center" style="height: 350px;">
+            <!-- Testimonial Cards -->
           </div>
+
+          <!-- Navigation Buttons -->
+          <div class="flex justify-center items-center space-x-4 mt-6">
+              <button id="prev-testimonial" class="p-3 bg-emerald-500 text-white rounded-full shadow-md hover:bg-white hover:text-emerald-500 transition-colors duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <div id="testimonial-dots" class="flex space-x-2"></div>
+              <button id="next-testimonial" class="p-3 bg-emerald-500 text-white rounded-full shadow-md hover:bg-white hover:text-emerald-500 transition-colors duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Newsletter -->
+      <section id="newsletter" class="py-20 bg-emerald-50 fade-in-section">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Conseils Exclusifs Dans Votre Boîte Mail</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+            Rejoignez notre newsletter pour recevoir des astuces, des études de cas et des offres spéciales pour exceller à l'oral.
+          </p>
+          <form class="max-w-md mx-auto">
+            <div class="flex items-center">
+              <input type="email" placeholder="Votre adresse e-mail" required class="w-full px-5 py-3 text-gray-700 bg-white border-2 border-gray-200 rounded-l-full focus:outline-none focus:border-emerald-500">
+              <button type="submit" class="bg-emerald-500 text-white px-8 py-3 rounded-r-full font-bold hover:bg-emerald-600 transition-colors">
+                S'abonner
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 
@@ -353,8 +352,7 @@
             maintenant.
           </p>
           <a
-            href="https://wa.me/22899767185?text=Bonjour%2C%20je%20suis%20intéressé(e)%20par%20le%20programme%20Impact'Oral."
-            target="_blank"
+            href="/src/pages/reservation.html"
             class="bg-red-600 text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-red-700 cta-button inline-flex items-center shadow-2xl"
           >
             <svg
@@ -372,23 +370,14 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            <span>Contacter sur WhatsApp</span>
+            <span>Réserver votre place</span>
           </a>
           <p class="mt-4 text-emerald-200">Contact direct : +228 99 76 71 85</p>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-6 text-center">
-        <p class="font-bold text-lg mb-2">Impact'Oral by Tchiav’s Excellence</p>
-        <p class="text-gray-400">
-          &copy; 2025 Tchiav’s Excellence. Tous droits réservés.
-        </p>
-        <!-- Ajouter les liens vers les réseaux sociaux ici -->
-      </div>
-    </footer>
+    <footer id="footer-placeholder"></footer>
 
     <!-- Scroll-to-top button -->
     <button
@@ -411,6 +400,6 @@
       </svg>
     </button>
 
-    <script src="src/js/main.js"></script>
+    <script src="/src/js/main.js"></script>
   </body>
 </html>

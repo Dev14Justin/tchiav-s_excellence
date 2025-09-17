@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservez Votre Coaching - Impact'Oral by Tchiav’s Excellence</title>
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom styles for animations and form */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #10B981; /* emerald-500 */
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(220, 38, 38, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header id="header-placeholder"></header>
+
+    <main id="main-content" class="pt-24">
+
+        <!-- Section 1: Introduction -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Commencez votre <span class="text-emerald-500">transformation</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Remplissez ce formulaire pour réserver votre accompagnement. C'est le premier pas vers une soutenance maîtrisée et un jury convaincu. Notre équipe vous recontactera dans les plus brefs délais pour confirmer votre demande.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Formulaire de Réservation -->
+        <section class="py-16 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-2xl">
+                    <div id="form-container">
+                        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Informations de réservation</h2>
+                        <form id="reservation-form" novalidate>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Nom complet -->
+                                <div>
+                                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                                    <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input" placeholder="Ex: Jean Dupont">
+                                </div>
+                                <!-- Email -->
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse e-mail</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input" placeholder="vous@exemple.com">
+                                </div>
+                                <!-- Téléphone -->
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Numéro WhatsApp</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input" placeholder="+228 XX XX XX XX">
+                                </div>
+                                <!-- Niveau d'étude -->
+                                <div>
+                                    <label for="studyLevel" class="block text-sm font-medium text-gray-700 mb-1">Niveau d'étude</label>
+                                    <select id="studyLevel" name="studyLevel" required class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input appearance-none">
+                                        <option value="" disabled selected>Sélectionnez votre niveau</option>
+                                        <option value="Licence">Licence</option>
+                                        <option value="Master">Master</option>
+                                        <option value="Doctorat">Doctorat</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                                <!-- Date de soutenance -->
+                                <div class="md:col-span-2">
+                                    <label for="defenseDate" class="block text-sm font-medium text-gray-700 mb-1">Date approximative de votre soutenance</label>
+                                    <input type="date" id="defenseDate" name="defenseDate" class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input">
+                                </div>
+                                <!-- Type d'accompagnement -->
+                                <div class="md:col-span-2">
+                                     <label for="coachingType" class="block text-sm font-medium text-gray-700 mb-1">Type d'accompagnement souhaité</label>
+                                     <select id="coachingType" name="coachingType" required class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input appearance-none">
+                                        <option value="" disabled selected>Choisissez une option</option>
+                                        <option value="Optimisation du Mémoire">Optimisation du Mémoire</option>
+                                        <option value="Coaching en Art Oratoire">Coaching en Art Oratoire</option>
+                                        <option value="Simulation de Soutenance">Simulation de Soutenance</option>
+                                        <option value="Pack Complet">Pack Complet (Recommandé)</option>
+                                    </select>
+                                </div>
+                                <!-- Message -->
+                                <div class="md:col-span-2">
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Votre message (facultatif)</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg form-input" placeholder="Avez-vous des questions ou des besoins spécifiques ?"></textarea>
+                                </div>
+                            </div>
+                            <div class="text-center mt-8">
+                                <button type="submit" class="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 cta-button shadow-lg">
+                                    Envoyer ma demande
+                                </button>
+                                <p id="form-error" class="text-red-500 mt-4 text-sm hidden">Veuillez remplir tous les champs obligatoires.</p>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Message de confirmation -->
+                    <div id="confirmation-message" class="hidden text-center">
+                        <div class="bg-emerald-100 text-emerald-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                           <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Demande envoyée !</h2>
+                        <p class="text-gray-600">Merci ! Nous avons bien reçu votre demande de réservation. Notre équipe vous contactera par WhatsApp ou e-mail dans les 24 heures pour finaliser les détails. Préparez-vous à briller !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Prochaines Étapes & FAQ -->
+        <section class="py-16 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">Que se passe-t-il ensuite ?</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Étape 1 -->
+                    <div>
+                        <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <h3 class="font-semibold text-lg mb-2">Confirmation</h3>
+                        <p class="text-gray-600 text-sm">Nous analysons votre demande et nous vous contactons pour confirmer la réception et valider vos besoins.</p>
+                    </div>
+                    <!-- Étape 2 -->
+                    <div>
+                        <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <h3 class="font-semibold text-lg mb-2">Planification</h3>
+                        <p class="text-gray-600 text-sm">Nous fixons ensemble un premier rendez-vous (en ligne ou en présentiel) pour démarrer votre coaching.</p>
+                    </div>
+                    <!-- Étape 3 -->
+                    <div>
+                        <div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <h3 class="font-semibold text-lg mb-2">Transformation</h3>
+                        <p class="text-gray-600 text-sm">Votre accompagnement commence. Préparez-vous à développer votre confiance et à maîtriser votre oral !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Scroll-to-top button -->
+    <button
+      id="to-top-button"
+      class="hidden fixed bottom-5 right-5 bg-emerald-500 text-white p-3 rounded-full shadow-lg hover:bg-emerald-600 transition-all duration-300"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
