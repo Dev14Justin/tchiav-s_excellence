@@ -182,7 +182,8 @@ const App = {
         this.initTestimonialCarousel();
         this.initFormHandlers();
         this.initFaqAccordion();
-        this.initStatsCounter(); // <-- Add this call
+        this.initStatsCounter();
+        this.initBlogFilter();
     },
 
     // Observer for fade-in animations on scroll
@@ -447,6 +448,38 @@ const App = {
                 }
             });
         }
+    },
+
+    // Blog category filter
+    initBlogFilter() {
+        const categoriesContainer = document.getElementById('blog-categories');
+        const articlesGrid = document.getElementById('articles-grid');
+        if (!categoriesContainer || !articlesGrid) return;
+
+        const filters = categoriesContainer.querySelectorAll('.category-filter-btn');
+        const articles = articlesGrid.querySelectorAll('.article-card');
+
+        categoriesContainer.addEventListener('click', (e) => {
+            e.preventDefault();
+            const filterBtn = e.target.closest('.category-filter-btn');
+            if (!filterBtn) return;
+
+            const filterValue = filterBtn.dataset.categoryFilter;
+
+            // Update active button
+            filters.forEach(btn => btn.classList.remove('active'));
+            filterBtn.classList.add('active');
+
+            // Filter articles
+            articles.forEach(article => {
+                const articleCategory = article.dataset.category;
+                if (filterValue === 'all' || filterValue === articleCategory) {
+                    article.classList.remove('hidden');
+                } else {
+                    article.classList.add('hidden');
+                }
+            });
+        });
     }
 };
 

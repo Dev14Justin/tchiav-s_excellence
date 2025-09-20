@@ -68,7 +68,7 @@
     <main id="main-content" class="pt-24">
 
         <!-- Section 1: Hero -->
-        <section class="py-16 text-center bg-gray-50">
+        <section id="stats-section" class="py-16 text-center bg-gray-50 fade-in-section">
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
                     Leurs Succès, Notre Fierté
@@ -76,18 +76,18 @@
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
                     Découvrez comment nous avons transformé l'épreuve de la soutenance en une opportunité de briller pour des dizaines d'étudiants. Les résultats parlent d'eux-mêmes.
                 </p>
-                <div class="flex flex-wrap justify-center gap-8">
-                    <div class="bg-white p-4 rounded-lg shadow-md">
-                        <p class="text-3xl font-bold text-emerald-500">17/20</p>
-                        <p class="text-sm text-gray-500">Note Moyenne Obtenue</p>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md w-48">
+                        <p class="text-4xl font-bold text-emerald-500"><span data-count-to="17">0</span>/20</p>
+                        <p class="text-gray-500">Note Moyenne</p>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow-md">
-                        <p class="text-3xl font-bold text-emerald-500">+20</p>
-                        <p class="text-sm text-gray-500">Étudiants Accompagnés</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md w-48">
+                        <p class="text-4xl font-bold text-emerald-500">+<span data-count-to="20">0</span></p>
+                        <p class="text-gray-500">Étudiants Accompagnés</p>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow-md">
-                        <p class="text-3xl font-bold text-emerald-500">98%</p>
-                        <p class="text-sm text-gray-500">Taux de Satisfaction</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md w-48">
+                        <p class="text-4xl font-bold text-emerald-500"><span data-count-to="98">0</span>%</p>
+                        <p class="text-gray-500">Taux de Satisfaction</p>
                     </div>
                 </div>
             </div>
@@ -134,6 +134,39 @@
                             "L'aide sur la structuration de mon mémoire a tout changé. Mon discours était clair, logique et a impressionné les examinateurs."
                         </blockquote>
                     </div>
+                     <!-- Success Story 4 -->
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col items-center text-center success-card">
+                        <div class="score-circle" style="--value: 85%;">
+                            <span class="score-text text-emerald-600">17<span class="text-sm">/20</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6">Elodie M.</h3>
+                        <p class="text-gray-500 mb-4">Doctorat en Pharmacie</p>
+                        <blockquote class="italic text-gray-700">
+                            "Le coaching m'a aidée à synthétiser des années de recherche en une présentation de 20 minutes claire et percutante. Une aide précieuse."
+                        </blockquote>
+                    </div>
+                    <!-- Success Story 5 -->
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col items-center text-center success-card">
+                        <div class="score-circle" style="--value: 90%;">
+                             <span class="score-text text-emerald-600">18<span class="text-sm">/20</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6">Jean P.</h3>
+                        <p class="text-gray-500 mb-4">Master en Finance</p>
+                        <blockquote class="italic text-gray-700">
+                            "J'ai appris à gérer les questions difficiles du jury avec assurance. La préparation mentale a été la clé de ma réussite."
+                        </blockquote>
+                    </div>
+                    <!-- Success Story 6 -->
+                    <div class="bg-gray-50 rounded-2xl p-8 flex flex-col items-center text-center success-card">
+                         <div class="score-circle" style="--value: 80%;">
+                             <span class="score-text text-emerald-600">16<span class="text-sm">/20</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mt-6">Awa S.</h3>
+                        <p class="text-gray-500 mb-4">Licence en Sociologie</p>
+                        <blockquote class="italic text-gray-700">
+                            "Je n'arrivais pas à trouver le fil rouge de ma présentation. L'équipe m'a aidée à construire un vrai storytelling. Merci !"
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </section>
@@ -147,7 +180,7 @@
                 </div>
                 <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
                     <!-- Formation Art Oratoire -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                         <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.257 0 7.168 2.912 7.168 7.168 0 3.14-2.333 5.482-5.168 5.482H10v-5.482h.571z"></path></svg>
                         </div>
@@ -155,7 +188,7 @@
                         <p class="text-gray-600 flex-grow">Maîtrisez l'art de la persuasion. Cette formation intensive vous apprend à structurer vos idées, à captiver votre audience et à communiquer avec charisme, que ce soit pour une présentation, un pitch ou un débat.</p>
                     </div>
                      <!-- Formation Soft Skills -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col">
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                         <div class="bg-emerald-100 text-emerald-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
